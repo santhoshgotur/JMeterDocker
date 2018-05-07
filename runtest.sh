@@ -1,0 +1,1 @@
+export timestamp=$(date +%Y%m%d_%H%M%S) && export volume_path=`pwd` && export jmeter_path=/var/lib/docker/volumes/jmetevol/_data && docker run --volume ${volume_path}:${jmeter_path} jmeter -n -t ${jmeter_path}/scripts/jmeter1.jmx -l ${jmeter_path}/tmp/result_${timestamp}.jtl -j ${jmeter_path}/tmp/jmeter_${timestamp}.log
